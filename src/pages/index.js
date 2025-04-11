@@ -1,0 +1,11 @@
+export { default as HomeLayout } from "./HomeLayout";
+export { default as Landing } from "./Landing";
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";
+export { default as Blogs } from "./Blogs";
+export { default as SingleBlog } from "./SingleBlog";
+export { default as SingleBlogLayout } from "./SingleBlogLayout";
+export { default as Support } from "./Support";
+export { default as Login } from "./Login";
+export { default as BlogForm } from "./BlogForm";
+export { default as Error } from "./Error";

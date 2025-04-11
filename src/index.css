@@ -1,0 +1,195 @@
+/* 
+====================
+tailwind
+====================
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    body {
+        @apply font-body text-sm md:text-base tracking-[1px]
+    }
+
+    h1 {
+        @apply text-3xl md:text-4xl lg:text-5xl uppercase m-0 font-headingFont font-normal leading-none
+    }
+
+    h2 {
+        @apply text-2xl md:text-3xl lg:text-4xl capitalize m-0 font-headingFont font-normal leading-none
+    }
+
+    h3 {
+        @apply text-xl md:text-2xl lg:text-3xl capitalize m-0 font-headingFont font-normal leading-none
+    }
+
+    h4 {
+        @apply text-lg md:text-xl lg:text-2xl capitalize m-0 font-headingFont font-normal leading-none
+    }
+
+    h5 {
+        @apply text-base md:text-lg lg:text-xl m-0 font-headingFont font-normal leading-none
+    }
+
+    h6 {
+        @apply text-sm md:text-base lg:text-lg m-0 font-headingFont font-normal leading-none
+    }
+
+    .align-element {
+        @apply mx-auto max-w-5xl px-4 xs:px-8 xs:max-w-6xl
+        /* @apply mx-auto px-4 xs:px-8 xs:max-w-6xl */
+    }
+
+    .section {
+        /* @apply min-h-[calc(100vh-268px)] lg:min-h-[calc(100vh-296px)] py-8 sm:py-12 md:py-20 lg:py-24 even:bg-base-200 */
+        /* @apply min-h-[calc(100vh-204px)] lg:min-h-[calc(100vh-234px)] even:bg-base-200 py-8 sm:py-12 md:py-16 lg:py-20 */
+        @apply min-h-[calc(100vh-208px)] lg:min-h-[calc(100vh-235px)] even:bg-base-200 py-8 sm:py-12 md:py-16 lg:py-20
+    }
+
+    .first-section {
+        @apply pb-8 pt-8 md:pb-0 md:pt-0
+    }
+
+    .toolbar-class {
+        @apply bg-slate-100;
+    }
+
+    .editor-class {
+        @apply border-solid border border-slate-300 rounded bg-slate-100 px-6 h-full min-h-80 text-black
+    }
+
+    .card {
+        @apply px-6 h-full min-h-80 shadow-md
+    }
+
+    .stanovy-list {
+        @apply list-circle ml-4 pl-2 first-letter:uppercase
+    }
+
+    .first-letter-detail-text {
+        @apply first-letter:uppercase first-letter:block first-letter:float-left first-letter:h-20 first-letter:py-0.5 first-letter:px-3.5 first-letter:border-solid first-letter:border-primary first-letter:border-2 first-letter:text-3xl first-letter:mt-2 first-letter:mr-3 first-letter:font-headingFont first-letter:italic
+    }
+
+    .btn-normal {
+        @apply btn btn-outline rounded-md w-20 hidden md:flex
+    }
+
+    .btn-small-primary {
+        @apply md:hidden text-primary text-base sm:text-2xl cursor-pointer hover:scale-110 transition duration-300
+    }
+
+    .btn-small-accent {
+        @apply md:hidden text-accent text-base sm:text-2xl cursor-pointer hover:scale-110 transition duration-300
+    }
+
+    .btn-small-error {
+        @apply md:hidden text-error text-base sm:text-2xl cursor-pointer hover:scale-110 transition duration-300
+    }
+
+    .date-input-sm {
+        @apply min-h-8 h-8 pl-3 pr-8 text-sm leading-8
+    }
+
+}
+
+.hero-img {
+    background:
+        linear-gradient(to right,
+            rgba(100, 116, 139, 0.6),
+            rgba(100, 116, 139, 0.6)),
+        url("./assets/hero.jpg") center/cover;
+    height: calc(100vh - 64px);
+}
+
+.navbar-text {
+    color: #5e81ac;
+}
+
+.dark {
+    color: #38bdf8;
+}
+
+@media screen and (min-width: 1124px) {
+    .hero-img {
+        height: calc(100vh - 99.9px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .blog-form {
+        grid-template-rows: auto;
+        gap: 1rem;
+        grid-template-areas:
+            "a a"
+            "b b"
+            "c c"
+            "d d"
+            "e e"
+            "f f"
+        ;
+    }
+
+    .input-1 {
+        grid-area: a;
+    }
+
+    .input-2 {
+        grid-area: b;
+    }
+
+    .input-3 {
+        grid-area: c;
+    }
+
+    .input-4 {
+        grid-area: d;
+    }
+
+    .input-5 {
+        grid-area: e;
+    }
+
+    .input-6 {
+        grid-area: f;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .about-img::before {
+        content: "";
+        position: absolute;
+        border: 0.25rem solid #5e81ac;
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        top: -1.5rem;
+        left: -1.5rem;
+    }
+
+    .about-img.dark::before {
+        border: 0.25rem solid #38bdf8;
+    }
+
+    .about-img {
+        position: relative;
+    }
+
+    .about-photo {
+        position: relative;
+        border-radius: 0.5rem;
+    }
+}
+
+.wrapper-class {}
+
+.editor-class:focus-within {
+    outline: solid 2px rgb(46 52 64 / 20%);
+    outline-offset: 2px;
+}
+
+.toolbar-class-hidden {
+    display: none;
+}
